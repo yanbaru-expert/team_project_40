@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root "texts#index"
-  resources :texts
+  resources :texts, only: [:index]
 end
