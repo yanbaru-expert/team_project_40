@@ -19,6 +19,8 @@
       <%= link_to "ログイン", new_user_session_path %>
       <%= link_to "アカウント登録", new_user_registration_path %>
     <% end %>
-    <%= yield %>
+    <div class="container-fluid py-4 mw-md">
+      <%= yield %>
+    </div>
   </body>
 </html>
