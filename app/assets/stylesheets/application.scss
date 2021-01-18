@@ -2,4 +2,52 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+
+.links {
+  font-size: 12px;
+  float: left;
+  background: #2E9AFE;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.content_name {
+  float: left;
+  font-size: 18px;
+  margin-right: 30px;
+  margin-left: 15px;
+  color: white;
+  display: inline-block;
+}
+
+.content_name_2 {
+  font-size: 5px;
+  margin-right: 30px;
+  margin-left: 15px;
+  color: white;
+}
+
+/**親要素**/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  font-size: 5px;
+  background: #2E9AFE;
+  border: none;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  width: 100px;
+}
+
+.dropdown-item {
+  font-size: 12px;
+}
