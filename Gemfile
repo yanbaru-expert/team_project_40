@@ -16,6 +16,8 @@ gem 'devise'
 # 多言語対応（Rails 6の場合）
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
+# Bootstrap
+gem 'devise-bootstrap-views'
 
 
 group :development, :test do
