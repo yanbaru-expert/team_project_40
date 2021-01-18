@@ -5,4 +5,12 @@ PASSWORD = 'password'
 User.find_or_create_by!(email: EMAIL) do |user|
   user.password = PASSWORDputs 'ユーザーの初期データインポートに成功しました。'
 end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+ADMINEMAIL = 'admin@example.com'
+ADMINPASSWORD = 'password'
+ADMINPASSWORDCONFIRMATION = 'password'
+
+AdminUser.find_or_create_by!(email: ADMINEMAIL) do |admin|
+  admin.password = ADMINPASSWORD
+  admin.passwordconfirmation = ADMINPASSWORDCONFIRMATION 
+end
