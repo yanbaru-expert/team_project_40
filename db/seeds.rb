@@ -9,4 +9,8 @@ end
 
 # テキスト教材のCSVインポート
 Text.destroy_all
-ImportCsv.import('db/csv_data/text_data.csv')
+ImportCsv.textimport('db/csv_data/text_data.csv')
+
+# 動画教材のCSVインポート
+Movie.destroy_all
+ImportCsv.movieimport('db/csv_data/movie_data.csv')
