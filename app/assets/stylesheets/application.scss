@@ -2,4 +2,35 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+
+@import "bootstrap/scss/bootstrap";
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+/* 全体 */
+
+.base-container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* max-width */
+
+.mw-md {
+  max-width: 720px;
+}
+
+.mw-lg {
+  max-width: 960px;
+}
+
+.mw-xl {
+  max-width: 1200px;
+}
