@@ -6,11 +6,9 @@ User.find_or_create_by!(email: EMAIL) do |user|
   user.password = PASSWORDputs 'ユーザーの初期データインポートに成功しました。'
 end
 
-ADMINEMAIL = 'admin@example.com'
-ADMINPASSWORD = 'password'
-ADMINPASSWORDCONFIRMATION = 'password'
+ADMIN_EMAIL = 'admin@example.com'
+ADMIN_PASSWORD = 'password'
 
-AdminUser.find_or_create_by!(email: ADMINEMAIL) do |admin|
-  admin.password = ADMINPASSWORD
-  admin.passwordconfirmation = ADMINPASSWORDCONFIRMATION 
+AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |admin|
+  admin.password = ADMIN_PASSWORD
 end
