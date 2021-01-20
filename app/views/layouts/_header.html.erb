@@ -3,6 +3,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse p" id="navbarNavDropdown">
     <ul class="navbar-nav">
 
@@ -18,9 +19,8 @@
           <a class="dropdown-item" href="#">チャレンジ問題集</a>
         </div>
       </li>
-      </li>
 
-            <li class="nav-item dropdown active">
+      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PHP
         </a>
@@ -29,47 +29,44 @@
           <a class="dropdown-item" href="#">PHP動画教材</a>
         </div>
       </li>
-      </li>
 
-              <li class="nav-item dropdown active">
+      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           フロント
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <a class="dropdown-item" href="/">HTML&CSS</a>
-    <a class="dropdown-item" href="/">javaScript</a></a>
-    <a class="dropdown-item" href="/">HTML&CSS</a>
-    <a class="dropdown-item" href="/">TypeScript</a>
-     <a class="dropdown-item" href="/">Angular</a>
-     <a class="dropdown-item" href="/">Vue</a>
-    <div class="dropdown-divider"></div>
-        </div>
-      </li>
+          <a class="dropdown-item" href="/">HTML&CSS</a>
+          <a class="dropdown-item" href="/">javaScript</a></a>
+          <a class="dropdown-item" href="/">HTML&CSS</a>
+          <a class="dropdown-item" href="/">TypeScript</a>
+          <a class="dropdown-item" href="/">Angular</a>
+          <a class="dropdown-item" href="/">Vue</a>
+        <div class="dropdown-divider"></div>
+     </div>
       </li>
       
-      
-            <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link disabled" href="#">対談</a>
       </li>
-            <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link disabled" href="#">マネタイズ講座</a>
       </li>
-            <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link disabled" href="#">LINE</a>
       </li>
 
-
        <% if user_signed_in? %>
-       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link content_name_2" %>
-  <% else %>
-      <li class="nav-item active">
-        <a class="nav-link" href="/users/sign_up">新規登録</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/users/sign_in#">ログイン</span></a>
-      </li>
-  <% end %>
-
+          <li class="nav-item active">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link" %>
+           </li>
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
     </ul>
   </div>
 </nav>
