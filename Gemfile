@@ -11,6 +11,8 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+# 管理者画面
+gem 'activeadmin'
 # ログイン機能
 gem 'devise'
 # 多言語対応（Rails 6の場合）
