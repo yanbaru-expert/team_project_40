@@ -4,4 +4,12 @@
  */
 @import "bootstrap/scss/bootstrap";
 
-.navbar {}
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse li {
+  font-size: 12px;
+}
