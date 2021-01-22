@@ -7,6 +7,13 @@ User.find_or_create_by!(email: EMAIL) do |user|
   puts 'ユーザーの初期データインポートに成功しました。'
 end
 
+ADMIN_EMAIL = 'admin@example.com'
+ADMIN_PASSWORD = 'password'
+
+AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |admin|
+  admin.password = ADMIN_PASSWORD
+end
+
 # テキスト教材のCSVインポート
 Text.destroy_all
 ImportCsv.textimport('db/csv_data/text_data.csv')
