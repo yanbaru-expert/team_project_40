@@ -13,32 +13,19 @@
   <body>
 
     <header>
-        <% if user_signed_in? %>
-      <%= link_to "アカウント編集", edit_user_registration_path %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
-    <% else %>
-      <%= link_to "ログイン", new_user_session_path %>
-      <%= link_to "アカウント登録", new_user_registration_path %>
-    <% end %>
-<<<<<<< HEAD
+      <%= render 'layouts/header' %>
     </header>
 
-    <%= render 'layouts/flash' %>
+      <%= render 'layouts/flash' %>
 
-=======
-    <header>
-    </header>
->>>>>>> develop
     <main>
       <div class="base-container <%= max_width %>">
         <%= yield %>
       </div>
     </main>
+
     <footer>
     </footer>
-<<<<<<< HEAD
 
-=======
->>>>>>> develop
   </body>
 </html>
