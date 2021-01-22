@@ -11,7 +11,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
 
     <header>
         <% if user_signed_in? %>
@@ -21,15 +20,9 @@
       <%= link_to "ログイン", new_user_session_path %>
       <%= link_to "アカウント登録", new_user_registration_path %>
     <% end %>
-<<<<<<< HEAD
     </header>
 
     <%= render 'layouts/flash' %>
-
-=======
-    <header>
-    </header>
->>>>>>> develop
     <main>
       <div class="base-container <%= max_width %>">
         <%= yield %>
@@ -37,13 +30,8 @@
     </main>
     <footer>
     </footer>
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
-=======
+    
   <%= render 'layouts/header' %>
     <%= yield %>
->>>>>>> 56f7d688518304a5aa642c175ab7d87b67a48646
   </body>
 </html>
