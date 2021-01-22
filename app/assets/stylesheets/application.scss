@@ -2,8 +2,6 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
-
 @import "bootstrap/scss/bootstrap";
 
 .alert-notice {
@@ -15,23 +13,13 @@
 }
 
 /* 全体 */
-=======
- @import "bootstrap/scss/bootstrap";
-
- /* 全体 */ 
->>>>>>> develop
 
 .base-container {
   margin: 0 auto;
   padding: 1rem;
 }
 
-<<<<<<< HEAD
 /* max-width */
-=======
-/* max-width */ 
->>>>>>> develop
-
 .mw-md {
   max-width: 720px;
 }
@@ -42,8 +30,4 @@
 
 .mw-xl {
   max-width: 1200px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> develop
