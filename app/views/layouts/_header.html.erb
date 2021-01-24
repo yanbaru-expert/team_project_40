@@ -14,6 +14,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Ruby/Rails教材</a>
           <a class="dropdown-item" href="#">AWS教材</a>
+          <a class="dropdown-item" href="#">動画教材</a>
           <a class="dropdown-item" href="#">プログラミング勉強会</a>
         　 <a class="dropdown-item" href="#">質問集</a>
           <a class="dropdown-item" href="#">チャレンジ問題集</a>
@@ -56,7 +57,10 @@
 
        <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link" %>
+            <%= link_to "マイページ", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "ログアウト", new_user_registration_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link" %>
            </li>
         <% else %>
           <li class="nav-item active">
