@@ -42,3 +42,8 @@
 .collapse li {
   font-size: 12px;
 }
+
+/* フッターと要素が被ることを防ぐ */
+body {
+  padding-bottom: 70px;
+}
