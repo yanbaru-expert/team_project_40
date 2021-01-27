@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "challenges", :media => "all" %>
+
+<h2 class="challenges_title">Rubyチャレンジ問題集</h2>
+<p class="challenges_coment">Rubyのチャレンジ問題集です。
+「やんばるエキスパート」参加者の皆様には「チャレンジ課題提出」チャンネルでレビューを行います。</p>
+
+<div class="cards">
+  <% @challenges.each do |text| %>
+    <div class="card" style="width: 18rem;">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">完了済みにする</a>
+        <p class="card-text"><%= text%></p>
+      </div>
+    </div>
+  <%end%>
+</div>
