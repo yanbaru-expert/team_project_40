@@ -8,7 +8,7 @@
         </div>
         <div class="card-body">
           <p><button class="card-title btn btn-secondary btn-block">視聴済みにする</button></p>
-          <h6 class="card-title">Lv.<%= count %> : <%= movie.title %></h6>
+          <h6 class="card-title">Lv.<%= "#{@base_level + count}" %> : <%= movie.title %></h6>
           <p class="card-text">【<%= movie.genre %>】</p>
         </div>
       </div>
