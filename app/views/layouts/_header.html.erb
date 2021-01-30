@@ -55,21 +55,21 @@
         <a class="nav-link disabled" href="#">LINE</a>
       </li>
 
-       <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "マイページ", new_user_session_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "ログアウト", new_user_registration_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link" %>
-           </li>
-        <% else %>
-          <li class="nav-item active">
-            <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "マイページ", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item active">
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
 
     </ul>
   </div>

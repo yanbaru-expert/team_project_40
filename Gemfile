@@ -20,6 +20,8 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 # Bootstrap
 gem 'devise-bootstrap-views'
+# ページネーション
+gem 'kaminari'
 
 
 group :development, :test do
