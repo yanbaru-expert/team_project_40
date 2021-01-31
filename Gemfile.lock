@@ -253,6 +253,7 @@ DEPENDENCIES
   activeadmin
   bootsnap (>= 1.4.2)
   byebug
+  coderay
   devise
   devise-bootstrap-views
   devise-i18n
