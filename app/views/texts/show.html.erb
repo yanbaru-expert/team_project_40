@@ -1,2 +1,7 @@
 <h1><%= @text.title %></h1>
-<p><%= @text.content %></p>
+<p>
+  <% renderer = Redcarpet::Render::HTML %>
+  <% extensions = { tables: true } %>
+  <% markdown = Redcarpet::Markdown.new(renderer, extensions) %>
+  <%= markdown.render(@text.content).html_safe %>
+</p>
