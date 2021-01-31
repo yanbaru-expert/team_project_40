@@ -22,6 +22,8 @@ gem 'devise-i18n'
 gem 'devise-bootstrap-views'
 # ページネーション
 gem 'kaminari'
+#マークダウン記法の文字列をHTMLに変換
+gem 'redcarpet'
 
 
 group :development, :test do
