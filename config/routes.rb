@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root "texts#index"
-  resources :challenges, only: [:index]
+  resources :challenges, only: [:index, :show]
   resources :texts, only: [:index, :show]
 end
