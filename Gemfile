@@ -22,7 +22,7 @@ gem 'devise-i18n'
 gem 'devise-bootstrap-views'
 # 検索機能
 gem 'ransack'
-# ページネーション機能
+# ページネーション
 gem 'kaminari'
 
 
