@@ -8,21 +8,7 @@
   <%= text_field_tag :title,'', class: 'js-text_field', id: "search-text" , placeholder: '教材を探す' %>
 
   <ul class="js-texts">
-    <%= render partial: 'text' %>
+    <%= render @texts %>
   </ul>
 
- 
-<body>
-  <div class="wrapper">
-    <div class="search-area">
-      <div class="search-result">
-        <div class="search-result__hit-num"></div>
-        <div id="search-result__list"></div>
-      </div>
-    </div>
-  </div><!-- /.wrapper -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    
-</body>
-
+  <%= link_to 'New Text', new_text_path %>

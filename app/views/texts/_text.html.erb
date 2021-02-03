@@ -1,15 +1,15 @@
-<div class="container">
+<div class="texts"> 
+  <div class="container">
     <div class="row">
-      <% @texts.each do |text| %>
         <div class="col-12 col-md-6 col-lg-4 text-card-container">
           <div class="card content-card border-dark mb-3">
             <img class="card-img-top" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" width="100%">
             <div class="card-body text-dark text-card-body">
-              <p class="card-text text-title"><%= text.title %></p>
-              <p class="card-text text-title">【<%= text.genre %>】</p>
+            <p class="card-text text-title"><%= text.title %> </p>
+              <p>【<%= text.genre %>】</p>
             </div>
           </div>
         </div>
-      <% end %>
     </div>
+  </div>
 </div>
