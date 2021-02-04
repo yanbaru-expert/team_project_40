@@ -21,15 +21,3 @@ ImportCsv.textimport('db/csv_data/text_data.csv')
 # 動画教材のCSVインポート
 Movie.destroy_all
 ImportCsv.movieimport('db/csv_data/movie_data.csv')
-
-# 質問集ページのデータインポート
-require "csv"
-require "faker"
-Faker::Config.locale = :ja
-
-# 1000件の初期データを投入
-1000.times do
-  Question.create!(title: Faker::Title.title, age: rand(0..100))
-end
-
-puts "初期データの投入に成功しました！"
