@@ -43,6 +43,18 @@
   font-size: 12px;
 }
 
+div.text-card-container {
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 50px;
+}
+
+div.content-card {
+  height: 270px;
+  max-width:300px;
+  margin: 0 auto;
+}
+
 /* フッターと要素が被ることを防ぐ */
 body {
   padding-bottom: 70px;
@@ -78,4 +90,19 @@ body {
 }
 .target-area .hidden {
   display: none
+}
+
+.use_icon {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.search-form {
+    width: 300px;
+    text-align: center;
 }
