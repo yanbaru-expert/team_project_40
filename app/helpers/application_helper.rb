@@ -3,7 +3,7 @@ module ApplicationHelper
     devise_controller? ? "mw-md" : "mw-xl"
   end
 
-  def color
+  def bg_color
     if controller.controller_name == "lines"
       "bg-success"
     else
