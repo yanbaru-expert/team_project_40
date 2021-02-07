@@ -22,7 +22,10 @@ gem 'devise-i18n'
 gem 'devise-bootstrap-views'
 # ページネーション
 gem 'kaminari'
-
+#マークダウン記法の文字列をHTMLに変換
+gem 'redcarpet'
+#シンタックスハイライト
+gem 'coderay'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
