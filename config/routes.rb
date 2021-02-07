@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :challenges, only: [:index, :show]
   resources :texts, only: [:index, :show]
   resources :movies, only: [:index]
+  resources :lines, only: [:index, :show]
 end
