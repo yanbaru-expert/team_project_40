@@ -21,7 +21,10 @@ document.addEventListener('turbolinks:load', function() {
       week: '週',
       month: '月',
       list: '予定リスト'
-    }
+    },
+    dayCellContent: function(e) {
+      e.dayNumberText = e.dayNumberText.replace('日', '');
+    },
   });
 
   calendar.render();
