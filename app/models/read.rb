@@ -4,4 +4,6 @@ class Read < ApplicationRecord
   validates :user_id, uniqueness: {
     scope: :text_id
   }
+
+ 
 end

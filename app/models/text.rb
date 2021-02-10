@@ -6,4 +6,9 @@ class Text < ApplicationRecord
   validates :genre, presence: true
   validates :content, presence: true
   validates :title, presence: true
+
+  # textを userが「読破」しているときは「ture」,「読破」していないときは「false」
+  def read_by?(user)
+    reads.find_by(user_id: user.id).present?
+  end
 end
