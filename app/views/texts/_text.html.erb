@@ -6,10 +6,11 @@
         </div>
       <div class="card-body text-dark text-card-body">
         <object>
-          <% if @text.read_by?(current_user) %>
-              <%= link_to '読破済みを解除', text_reads_path(@text), method: :delete %>
+          <%# <% if @text.read_by?(current_user) %>
+          <% if @read_text_ids.include?(text.id) %>
+              <%= render "read", post: text %>
           <% else %>
-              <%= link_to '読破済みにする', text_reads_path(@text), method: :post %>
+              <%= render "unread", post: text %>
           <% end %>
         </object>
         <p class="card-text text-title"><%= text.title %> </p>
