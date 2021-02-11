@@ -12,15 +12,17 @@ document.addEventListener('turbolinks:load', function() {
     initialView: 'dayGridMonth',
     themeSystem: 'bootstrap',
     headerToolbar: {
-      left: 'today,prev,next',
-      center: 'title',
+      left: 'today prev,next',
+      center: '',
       right: 'timeGridWeek,dayGridMonth,listWeek'
     },
     buttonText: {
       today: '今日',
       week: '週',
       month: '月',
-      list: '予定リスト'
+      list: '予定リスト',
+      prev: '◀',
+      next: '▶️'
     },
     dayCellContent: function(e) {
       e.dayNumberText = e.dayNumberText.replace('日', '');
