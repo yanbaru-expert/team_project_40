@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       text: 教材
-      read: 読む
+      read: 読破済み
     attributes:
       text:
         content: 内容
