@@ -2,7 +2,6 @@ class Texts::SearchesController < ApplicationController
   def index
     
     @texts = Text.where('title LIKE(?)', "%#{params[:title]}%")
-    # binding.pry
     respond_to do |format|
       format.html { redirect_to :root }
       # ↓検索結果のデータをレスポンスするコード
