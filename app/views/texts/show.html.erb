@@ -2,12 +2,12 @@
 <p>
   <%= markdown(@text.content) %>
 </p>
-<div id="text-<%=@text.id %>" class="mb-4">
+<div id="text-<%= @text.id %>" class="mb-4">
   <object>
     <% if @text.read_by?(current_user) %>
-      <%= render "read", post: @text %>
+      <%= render "read", text: @text %>
     <% else %>
-      <%= render "unread", post: @text %>
+      <%= render "unread", text: @text %>
     <% end %>
   </object>
 </div> 

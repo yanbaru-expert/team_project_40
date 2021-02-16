@@ -7,11 +7,9 @@
       <div id="text-<%= text.id %>">
         <object>
           <% if @read_text_ids.include?(text.id) %>
-              <%# <%= render "read", post: text %> 
-              <%= link_to '読破済みを解除', text_reads_path(text), class: 'btn btn-primary btn-block', method: :delete, remote: true %>
+            <%= render "read", text: text %> 
           <% else %>
-              <%# <%= render "unread", post: text %>
-              <%= link_to '読破済みにする', text_reads_path(text), class: 'btn btn-secondary btn-block', method: :post, remote: true %>
+            <%= render "unread", text: text %>
           <% end %>
         </object>
       </div>
