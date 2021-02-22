@@ -6,4 +6,9 @@ class Movie < ApplicationRecord
   validates :genre, presence: true
   validates :title, presence: true
   validates :url, presence: true
+
+  # movie を user が「視聴済み」のときは「true」、「未視聴」であれば「false」
+  def watched_movie_by?(user)
+    watched_movies.find_by(user_id: user.id).present?
+  end
 end
