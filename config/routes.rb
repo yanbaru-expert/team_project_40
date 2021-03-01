@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
   resources :challenges, only: [:index, :show]
   resources :texts, only: [:index, :show, :new]
-  resources :movies, only: [:index]
+  resources :movies do
+    resource :watched_movies, only: [:index]
+  end
   resources :lines, only: [:index, :show]
 end
