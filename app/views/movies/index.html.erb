@@ -7,7 +7,7 @@
           <iframe width="560" height="315" class="embed-responsive-item" src="<%= movie.url %>"></iframe>
         </div>
         <div class="card-body">
-          <p>
+          <p id="watched-movie-<%= movie.id %>">
             <% if @watched_movie_ids.include?(movie.id) %>
               <%= render "watched_movie", movie: movie %>
             <% else %>
