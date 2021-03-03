@@ -60,51 +60,32 @@ body {
   padding-bottom: 70px;
 }
 
-.search-area input[type="text"] {
-  padding: 5px 5px 3px;
-  font-size: 16px;
-  border: 1px solid #D6D6D6;
-}
-
-.search-area input[type="text"]:focus {
-  background: #F9F9F9;
-}
-
-.search-result {
-  margin-top: 20px;
-}
 .hit-num__text span {
   font-weight: bold;
 }
-#search-result__list {
-  margin-top: 15px;
-}
-#search-result__list span {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 5px;
-  background: #F2F2F2;
-}
-.target-area {
-  margin-top: 50px;
-}
-.target-area .hidden {
-  display: none
+
+// サーチフォームの設定
+form.search-form {
+  max-width: 350px;
+  position: relative;
 }
 
-.use_icon {
-	display: inline-block;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+// サーチフォームの高さ調整
+#search-text {
+  height: 50px;
 }
 
-.search-form {
-    width: 300px;
-    text-align: center;
+// サーチフォーム内のテキスト調整
+input.search-text {
+  padding-left: 50px;
+}
+
+// サーチアイコンの設定
+i.search-icon {
+    position: absolute;
+    top: 32%;
+    left: 5%;
+    z-index: 11;
 }
 
 a, a:visited, a:focus, a:hover {
