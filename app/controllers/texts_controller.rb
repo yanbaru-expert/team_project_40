@@ -6,5 +6,6 @@ class TextsController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
+    @movies = Movie.where(text_id: @text.id)
   end
 end
