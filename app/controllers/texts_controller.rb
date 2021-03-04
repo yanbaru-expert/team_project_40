@@ -7,5 +7,6 @@ class TextsController < ApplicationController
   def show
     @text = Text.find(params[:id])
     @movies = Movie.where(text_id: @text.id)
+    @watched_movie_ids = current_user.watched_movies.pluck(:movie_id)
   end
 end
