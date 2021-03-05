@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+  belongs_to :text
   has_many :users
   has_many :watched_movies, dependent: :destroy 
   # movie.finished_watching_users で movie を「視聴済み」ユーザーの一覧を取得できるようになる

@@ -6,7 +6,7 @@ ActiveAdmin.register Movie do
       input :genre
       input :title
       input :url
-      input :text_id
+      input :text
     end
     f.actions
   end
