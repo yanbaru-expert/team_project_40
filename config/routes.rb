@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :texts, only: [:index, :show, :new]
   resources :movies, only: [:index]
   resources :lines, only: [:index, :show]
+  resources :mypages, only: [:index]
 end
