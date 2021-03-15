@@ -1,4 +1,7 @@
 <h1><%= @text.title %></h1>
+
+<%= render "movie" if @movies.present? %>
+
 <p>
   <%= markdown(@text.content) %>
 </p>

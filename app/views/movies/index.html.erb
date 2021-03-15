@@ -1,19 +1,30 @@
-<div class="container mt-5">
-  <div class="row ">
-  <% @movies.each.with_index(@movies.offset_value + 1) do |movie,count|%>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-      <div class="card border-dark h-100">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe width="560" height="315" class="embed-responsive-item" src="<%= movie.url %>"></iframe>
+<div class="base-container mw-xl">
+  <div class="contents-title text-center">
+    <h1>Ruby/Rails 動画教材</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row ">
+      <% @movies.each.with_index(@movies.offset_value + 1) do |movie,count|%>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card border-dark h-100">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" class="embed-responsive-item" src="<%= movie.url %>"></iframe>
+            </div>
+            <div class="card-body">
+              <p id="watched-movie-<%= movie.id %>">
+                <% if @watched_movie_ids.include?(movie.id) %>
+                  <%= render "watched_movie", movie: movie %>
+                <% else %>
+                  <%= render "unwatched_movie", movie: movie %>
+                <% end %>
+              </p>
+              <h6 class="card-title">Lv.<%= count %> : <%= movie.title %></h6>
+              <p class="card-text">【<%= movie.genre %>】</p>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <p><button class="card-title btn btn-secondary btn-block">視聴済みにする</button></p>
-          <h6 class="card-title">Lv.<%= count %> : <%= movie.title %></h6>
-          <p class="card-text">【<%= movie.genre %>】</p>
-        </div>
-      </div>
+      <% end %>
     </div>
-  <%end%>
   </div>
   <%= paginate @movies %>
 </div>
