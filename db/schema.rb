@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_08_082203) do
+ActiveRecord::Schema.define(version: 2021_03_04_160316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_02_08_082203) do
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "text_id"
   end
 
   create_table "reads", force: :cascade do |t|
@@ -87,6 +88,18 @@ ActiveRecord::Schema.define(version: 2021_02_08_082203) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "watched_movies", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_watched_movies_on_movie_id"
+    t.index ["user_id", "movie_id"], name: "index_watched_movies_on_user_id_and_movie_id", unique: true
+    t.index ["user_id"], name: "index_watched_movies_on_user_id"
+  end
+
   add_foreign_key "reads", "texts"
   add_foreign_key "reads", "users"
+  add_foreign_key "watched_movies", "movies"
+  add_foreign_key "watched_movies", "users"
 end
