@@ -1,1 +1,45 @@
-test
+<div class="container">
+  <div class="text-center m-5">
+    <h2>進捗管理</h2>
+  </div>
+  
+  <div>
+    <h4>テキスト教材 読破済み</h4>
+  </div>
+
+  <div class="mt-3">
+    Basic  (<%= selectUserReadCount("Basic")%>/<%=selectTextGenreCount("Basic")%>)
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( selectUserReadCount("Basic")/selectTextGenreCount("Basic").to_f*100).round(0)%>%">
+        <%=( selectUserReadCount("Basic")/selectTextGenreCount("Basic").to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    Git  (<%=selectUserReadCount("Git")%>/<%=selectTextGenreCount("Git")%>)
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=(selectUserReadCount("Git")/selectTextGenreCount("Git").to_f*100).round(0)%>%">
+          <%=(selectUserReadCount("Git")/selectTextGenreCount("Git").to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    Ruby  (<%=selectUserReadCount("Ruby")%>/<%=selectTextGenreCount("Ruby")%>)
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=(selectUserReadCount("Ruby")/selectTextGenreCount("Ruby").to_f*100).round(0)%>%">
+        <%=(selectUserReadCount("Ruby")/selectTextGenreCount("Ruby").to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    Ruby on Rails  (<%=selectUserReadCount("Ruby on Rails")%>/<%=selectTextGenreCount("Ruby on Rails")%>)
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=(selectUserReadCount("Ruby on Rails")/selectTextGenreCount("Ruby on Rails").to_f*100).round(0)%>%">
+        <%=(selectUserReadCount("Ruby on Rails")/selectTextGenreCount("Ruby on Rails").to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>
+</div>
