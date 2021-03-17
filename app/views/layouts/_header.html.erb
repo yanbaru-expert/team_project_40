@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark <%= bg_color %>">
-  <a class="navbar-brand" href="#">やんばるCODE</a>
+  <a class="navbar-brand" href="/">やんばるCODE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,7 +42,7 @@
           <a class="dropdown-item" href="/">TypeScript</a>
           <a class="dropdown-item" href="/">Angular</a>
           <a class="dropdown-item" href="/">Vue</a>
-        <div class="dropdown-divider"></div>
+        </div>
       </li>
 
       <li class="nav-item active">
@@ -62,7 +62,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/mypages">進捗管理</a>
-            <a class="dropdown-item" href="/">アカウント編集</a>
+            <a class="dropdown-item" href="#">アカウント編集</a>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "dropdown-item text-dark" %>
           </div>
         </li>
