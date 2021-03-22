@@ -6,7 +6,7 @@ class MypagesController < ApplicationController
     @genreCount =
     {
       userGenre: current_user.read_texts.group(:genre).count,
-      allGenre:  Text.group(:genre).count()
+      allGenre:  Text.group(:genre).count
     }
     
   end
