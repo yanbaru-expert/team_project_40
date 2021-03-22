@@ -1,18 +1,14 @@
 class MypagesController < ApplicationController
   def index
-    
+   
+    # ユーザーが読破済みのテキスト教材のジャンルをカウント
+    # 全てのテキスト教材のジャンルをカウント
     @genreCount =
     {
-      userBasic: current_user.read_texts.where(genre:"Basic").count,
-      allBasic:  Text.all.where(genre:"Basic").count,
-      userGit:   current_user.read_texts.where(genre:"Git").count,
-      allGit:    Text.all.where(genre:"Git").count,
-      userRuby:  current_user.read_texts.where(genre:"Ruby").count,
-      allRuby:   Text.all.where(genre:"Ruby").count,
-      userRails: current_user.read_texts.where(genre:"Ruby on Rails").count,
-      allRails:  Text.all.where(genre:"Ruby on Rails").count,
+      userGenre: current_user.read_texts.group(:genre).count,
+      allGenre:  Text.group(:genre).count()
     }
-
+    
   end
   
 end
