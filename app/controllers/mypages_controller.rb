@@ -7,7 +7,8 @@ class MypagesController < ApplicationController
     {
       userTextGenre:  current_user.read_texts.group(:genre).count,
       allTextGenre:   Text.group(:genre).count,
-
+      userMovieGenre: current_user.finished_watching_movies.group(:genre).count,
+      allMovieGenre:  Movie.group(:genre).count
     }
     
   end
