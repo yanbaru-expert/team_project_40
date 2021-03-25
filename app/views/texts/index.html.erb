@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<% if request.path == "/" %>
-  <div id="calendar"></div>
-<% end %>
-<h1 class="text-center">Rails テキスト教材</h1>
-=======
 <div class="texts-wrapper">
+  <% if request.path == "/" %>
+    <div id="calendar"></div>
+  <% end %>
   <div class="contents-title text-center">
     <h1>Rails テキスト教材</h1>
   </div>
@@ -13,7 +10,6 @@
     <i class="fa fa-search search-icon" title="Search"></i>
     <input type="text" id="search-text" class="form-control search-text" placeholder="教材を探す" aria-label="Username" aria-describedby="search-form">
   </form>
->>>>>>> 3c185da9d53f84f0bbd7ecbe911ebf4ee6f5fb5c
 
   <div class="row">
     <%= render @texts %>
