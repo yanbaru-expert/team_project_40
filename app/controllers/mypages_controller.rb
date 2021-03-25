@@ -5,8 +5,9 @@ class MypagesController < ApplicationController
     # 全てのテキスト教材のジャンルをカウント
     @genreCount =
     {
-      userGenre: current_user.read_texts.group(:genre).count,
-      allGenre:  Text.group(:genre).count
+      userTextGenre:  current_user.read_texts.group(:genre).count,
+      allTextGenre:   Text.group(:genre).count,
+
     }
     
   end
