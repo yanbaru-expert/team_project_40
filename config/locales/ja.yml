@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      text: 教材
+      movie: 動画
+      read: 読破
+      watched_movie: 視聴
+    attributes:
+      text:
+        content: 内容
+        user: ユーザー
+      read:
+        user: ユーザー
+        text: 教材
+      watched_movie:
+        user: ユーザー
+        movie: 動画
+  time:
+    formats:
+      default: "%Y年%-m月%-d日(%a) %-H時%-M分%-S秒"

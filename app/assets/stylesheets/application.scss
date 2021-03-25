@@ -43,11 +43,57 @@
   font-size: 12px;
 }
 
+div.text-card-container {
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 50px;
+}
+
+div.content-card {
+  height: 270px;
+  max-width:300px;
+  margin: 0 auto;
+}
+
 /* フッターと要素が被ることを防ぐ */
 body {
   padding-bottom: 70px;
 }
 
+.hit-num__text span {
+  font-weight: bold;
+}
+
+// サーチフォームの設定
+form.search-form {
+  max-width: 350px;
+  position: relative;
+}
+
+// サーチフォームの高さ調整
+#search-text {
+  height: 50px;
+}
+
+// サーチフォーム内のテキスト調整
+input.search-text {
+  padding-left: 50px;
+}
+
+// サーチアイコンの設定
+i.search-icon {
+    position: absolute;
+    top: 32%;
+    left: 5%;
+    z-index: 11;
+}
+
 a, a:visited, a:focus, a:hover {
   text-decoration: none;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
 }
