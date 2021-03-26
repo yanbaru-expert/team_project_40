@@ -13,7 +13,7 @@ document.addEventListener('turbolinks:load', function() {
     themeSystem: 'bootstrap',
     headerToolbar: {
       left: 'today prev,next',
-      center: '',
+      center: 'title',
       right: 'timeGridWeek,dayGridMonth,listWeek'
     },
     buttonText: {
