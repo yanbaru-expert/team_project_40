@@ -3,12 +3,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
+import interactionPlugin from '@fullcalendar/interaction';
 
 document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new Calendar(calendarEl, {
     locale: 'ja',
-    plugins: [ dayGridPlugin, timeGridPlugin, listPlugin, bootstrapPlugin ],
+    plugins: [ dayGridPlugin, timeGridPlugin, listPlugin, bootstrapPlugin, interactionPlugin ],
     initialView: 'dayGridMonth',
     themeSystem: 'bootstrap',
     headerToolbar: {
