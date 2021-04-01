@@ -8,41 +8,116 @@
   </div>
  
  <div class="mt-3">
-    Basic  (<%=@genreCount[:userGenre]["Basic"] ||= 0%>/<%=@genreCount[:allGenre]["Basic"] ||= 0%>)
+    Basic  (<%=@genreCount[:userTextGenre]["Basic"] ||= 0%>/<%=@genreCount[:allTextGenre]["Basic"] ||= 0%>)
     <div class="progress" style="height: 25px;">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userGenre]["Basic"]/@genreCount[:allGenre]["Basic"].to_f*100).round(0)%>%">
-        <%=( @genreCount[:userGenre]["Basic"]/@genreCount[:allGenre]["Basic"].to_f*100).round(0)%>%
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userTextGenre]["Basic"]/@genreCount[:allTextGenre]["Basic"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userTextGenre]["Basic"]/@genreCount[:allTextGenre]["Basic"].to_f*100).round(0)%>%
       </div>
     </div>
   </div> 
 
  <div class="mt-3">
-    Git  (<%=@genreCount[:userGenre]["Git"] ||= 0%>/<%=@genreCount[:allGenre]["Git"] ||= 0%>)
+    Git  (<%=@genreCount[:userTextGenre]["Git"] ||= 0%>/<%=@genreCount[:allTextGenre]["Git"] ||= 0%>)
     <div class="progress" style="height: 25px;">
-      <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userGenre]["Git"]/@genreCount[:allGenre]["Git"].to_f*100).round(0)%>%">
-          <%=( @genreCount[:userGenre]["Git"]/@genreCount[:allGenre]["Git"].to_f*100).round(0)%>%
+      <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userTextGenre]["Git"]/@genreCount[:allTextGenre]["Git"].to_f*100).round(0)%>%">
+          <%=( @genreCount[:userTextGenre]["Git"]/@genreCount[:allTextGenre]["Git"].to_f*100).round(0)%>%
       </div>
     </div>
   </div>
 
 
  <div class="mt-3">
-    Ruby  (<%=@genreCount[:userGenre]["Ruby"] ||= 0%>/<%=@genreCount[:allGenre]["Ruby"] ||= 0%>)
+    Ruby  (<%=@genreCount[:userTextGenre]["Ruby"] ||= 0%>/<%=@genreCount[:allTextGenre]["Ruby"] ||= 0%>)
     <div class="progress" style="height: 25px;">
-      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userGenre]["Ruby"]/@genreCount[:allGenre]["Ruby"].to_f*100).round(0)%>%">
-        <%=( @genreCount[:userGenre]["Ruby"]/@genreCount[:allGenre]["Ruby"].to_f*100).round(0)%>%
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userTextGenre]["Ruby"]/@genreCount[:allTextGenre]["Ruby"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userTextGenre]["Ruby"]/@genreCount[:allTextGenre]["Ruby"].to_f*100).round(0)%>%
       </div>
     </div>
   </div>
 
   <div class="mt-3">
-    Ruby on Rails  (<%=@genreCount[:userGenre]["Ruby on Rails"] ||= 0%>/<%=@genreCount[:allGenre]["Ruby on Rails"] ||= 0%>)
+    Ruby on Rails  (<%=@genreCount[:userTextGenre]["Ruby on Rails"] ||= 0%>/<%=@genreCount[:allTextGenre]["Ruby on Rails"] ||= 0%>)
     <div class="progress" style="height: 25px;">
-      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userGenre]["Ruby on Rails"]/@genreCount[:allGenre]["Ruby on Rails"].to_f*100).round(0)%>%">
-        <%=( @genreCount[:userGenre]["Ruby on Rails"]/@genreCount[:allGenre]["Ruby on Rails"].to_f*100).round(0)%>%
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userTextGenre]["Ruby on Rails"]/@genreCount[:allTextGenre]["Ruby on Rails"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userTextGenre]["Ruby on Rails"]/@genreCount[:allTextGenre]["Ruby on Rails"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>   
+
+  <div class="mt-5">
+    <h4>動画教材 視聴済み</h4>
+  </div>
+
+  <div class="mt-3">
+    Ruby  (<%=@genreCount[:userMovieGenre]["Ruby"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Ruby"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Ruby"]/@genreCount[:allMovieGenre]["Ruby"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Ruby"]/@genreCount[:allMovieGenre]["Ruby"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div> 
+
+  <div class="mt-3">
+    Ruby on Rails  (<%=@genreCount[:userMovieGenre]["Ruby on Rails"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Ruby on Rails"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Ruby on Rails"]/@genreCount[:allMovieGenre]["Ruby on Rails"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Ruby on Rails"]/@genreCount[:allMovieGenre]["Ruby on Rails"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div> 
+
+  <div class="mt-3">
+    Git  (<%=@genreCount[:userMovieGenre]["Git"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Git"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Git"]/@genreCount[:allMovieGenre]["Git"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Git"]/@genreCount[:allMovieGenre]["Git"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    Php  (<%=@genreCount[:userMovieGenre]["Php"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Php"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Php"]/@genreCount[:allMovieGenre]["Php"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Php"]/@genreCount[:allMovieGenre]["Php"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>  
+
+  <div class="mt-3">
+    Live  (<%=@genreCount[:userMovieGenre]["Live"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Live"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Live"]/@genreCount[:allMovieGenre]["Live"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Live"]/@genreCount[:allMovieGenre]["Live"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>  
+
+  <div class="mt-3">
+    Basic  (<%=@genreCount[:userMovieGenre]["Basic"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Basic"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Basic"]/@genreCount[:allMovieGenre]["Basic"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Basic"]/@genreCount[:allMovieGenre]["Basic"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>  
+
+  <div class="mt-3">
+    Talk  (<%=@genreCount[:userMovieGenre]["Talk"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Talk"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Talk"]/@genreCount[:allMovieGenre]["Talk"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Talk"]/@genreCount[:allMovieGenre]["Talk"].to_f*100).round(0)%>%
+      </div>
+    </div>
+  </div>  
+
+  <div class="mt-3">
+    Money  (<%=@genreCount[:userMovieGenre]["Money"] ||= 0%>/<%=@genreCount[:allMovieGenre]["Money"] ||= 0%>)
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%=( @genreCount[:userMovieGenre]["Money"]/@genreCount[:allMovieGenre]["Money"].to_f*100).round(0)%>%">
+        <%=( @genreCount[:userMovieGenre]["Money"]/@genreCount[:allMovieGenre]["Money"].to_f*100).round(0)%>%
       </div>
     </div>
   </div>        
-
 
 </div>
