@@ -3,6 +3,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("bootstrap/dist/js/bootstrap")
+require("../calendar")
 
 document.addEventListener('turbolinks:load', () => {
     const search = document.getElementById('search-text')

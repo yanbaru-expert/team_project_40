@@ -1,4 +1,7 @@
 <div class="texts-wrapper">
+  <% if request.path == "/" %>
+    <%= render template: "events/index.html.erb" %>
+  <% end %>
   <div class="contents-title text-center">
     <h1>Rails テキスト教材</h1>
   </div>
