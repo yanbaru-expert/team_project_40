@@ -10,4 +10,14 @@ module ApplicationHelper
       "bg-primary"
     end
   end
+
+  def selectUserReadCount(genre)
+    @userReadText.where(genre:genre).count
+  end
+
+  def selectTextGenreCount(genre)
+    @texts.where(genre:genre).count
+  end
+  
+  
 end

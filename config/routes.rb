@@ -3,13 +3,15 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root "texts#index"
-  namespace :texts do
-    resources :searches, only: :index, defaults: { format: :json }
+  resources :texts do
+    resource :reads, only: [:create, :destroy]
   end
-  resources :texts, only: [:index, :show, :new]
   resources :challenges, only: [:index, :show]
-  resources :texts, only: [:index, :show]
-  resources :questions, only: [:index, :show]
+  resources :texts, only: [:index, :show, :new]
+  resources :movies do
+    resource :watched_movies, only: [:create, :destroy]
+  end
   resources :movies, only: [:index]
   resources :lines, only: [:index, :show]
+  resources :mypages, only: [:index]
 end
