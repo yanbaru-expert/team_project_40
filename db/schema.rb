@@ -76,14 +76,6 @@ ActiveRecord::Schema.define(version: 2021_03_04_160316) do
     t.index ["user_id"], name: "index_reads_on_user_id"
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.string "title"
-    t.string "genre"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "content"
-  end
-
   create_table "texts", force: :cascade do |t|
     t.string "genre"
     t.string "title"
