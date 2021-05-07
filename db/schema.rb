@@ -58,6 +58,14 @@ ActiveRecord::Schema.define(version: 2021_03_04_160316) do
     t.integer "text_id"
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "content"
+  end
+
   create_table "reads", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "text_id", null: false
