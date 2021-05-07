@@ -35,8 +35,6 @@ class ImportCsv
     puts "questionsへのCSVデータをインポート完了"
   end
 
-end
-
   # CSVデータのパスを引数として受け取り、インポート処理を実行
   def self.lineimport(path)
     CSV.foreach(path, headers: true) do |row|

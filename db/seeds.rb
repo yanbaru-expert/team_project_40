@@ -25,7 +25,7 @@ ImportCsv.movieimport('db/csv_data/movie_data.csv')
 
 # 動画教材のCSVインポート
 Question.destroy_all
-ImportCsv.movieimport('db/csv_data/question_data.csv')
+ImportCsv.questionsimport('db/csv_data/question_data.csv')
 
 # LineページのCSVインポート
 Line.destroy_all
