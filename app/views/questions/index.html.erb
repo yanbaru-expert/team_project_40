@@ -1,0 +1,40 @@
+  <h2 class="text-center mb-5">質問集</h2>
+
+<%= search_form_for @q do |f| %>
+  <%= f.radio_button :genre_eq, 'Ruby' %>Ruby
+  <%= f.radio_button :genre_eq, 'Ruby on Rails' %>Ruby on Rails
+  <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="form-control bg-secondary"><%= f.label :title_cont, "タイトル" %></div>
+      </div>
+       <%= f.search_field :title_cont, class: "form-control" %>
+  </div>
+  <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="form-control bg-secondary"><%= f.label :content_cont, "キーワード"%></div>
+      </div>
+       <%= f.search_field :content_cont, class: "form-control"%>
+  </div>
+  <%= f.submit :class=>"btn btn-primary btn-block"%>
+<% end %>
+
+<div class="table-container mt-4">
+<table class="table table-striped">
+    <thead class="text-white base-bg-color">
+      <tr class="bg-primary">
+        <th>ジャンル</th>
+        <th>タイトル</th>
+      </tr>
+</thead>
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td class="text-nowrap align-middle"><%= question.genre %></td>
+        <td class="text-nowrap align-middle"><%= link_to "#{question.title}", question%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<%= paginate @questions %>

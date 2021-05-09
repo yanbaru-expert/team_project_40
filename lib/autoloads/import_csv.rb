@@ -24,6 +24,18 @@ class ImportCsv
     puts "MovieへのCSVデータをインポート完了"
   end
 
+    # CSVデータのパスを引数として受け取り、インポート処理を実行
+  def self.questionsimport(path)
+    CSV.foreach(path, headers: true) do |row|
+      Question.create!(
+        genre:  row["genre"],
+        title:  row["title"],
+        content:  row["content"]
+      )
+    end
+    puts "questionsへのCSVデータをインポート完了"
+  end
+
   # CSVデータのパスを引数として受け取り、インポート処理を実行
   def self.lineimport(path)
     CSV.foreach(path, headers: true) do |row|

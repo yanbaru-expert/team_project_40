@@ -20,6 +20,8 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 # Bootstrap
 gem 'devise-bootstrap-views'
+# 検索機能
+gem 'ransack'
 # ページネーション
 gem 'kaminari'
 #マークダウン記法の文字列をHTMLに変換
