@@ -30,6 +30,7 @@ class ImportCsv
       Question.create!(
         genre:  row["genre"],
         title:  row["title"],
+        content:  row["content"]
       )
     end
     puts "questionsへのCSVデータをインポート完了"
