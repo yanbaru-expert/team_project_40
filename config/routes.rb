@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resource :watched_movies, only: [:create, :destroy]
   end
   resources :movies, only: [:index]
+  resources :questions, only: [:index, :show]
   resources :lines, only: [:index, :show]
   resources :mypages, only: [:index]
 end
